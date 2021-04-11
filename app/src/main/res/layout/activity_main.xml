@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainconstarint"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/black"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".controller.MainActivity">
+
+
+
+
+    <ImageView
+        android:id="@+id/app_logo"
+        android:layout_width="400dp"
+        android:layout_height="300dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ifruitlogo"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:ignore="MissingConstraints" />
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/large_margin"
+        android:text="صفحه ورود"
+        android:textColor="#71DB77"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/app_logo"
+        tools:ignore="MissingConstraints" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/username_field"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="@dimen/small_margin"
+        android:layout_marginEnd="24dp"
+        android:hint="نام کاربری"
+        android:textColorHint="#71DB77"
+        android:gravity="right"
+        android:backgroundTint="#71DB77"
+        android:padding="@dimen/small_margin"
+        android:textSize="@dimen/text_large_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/app_logo"
+        app:layout_constraintBottom_toTopOf="@+id/password_field"
+        android:inputType="text"
+        android:digits="@string/valid_character_username"
+        android:maxLines="1"
+        tools:ignore="MissingConstraints">
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editusername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:textColor="@color/green"
+            android:ems="15"
+            android:background="@color/black"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/password_field"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="@color/green"
+
+        android:gravity="right"
+        app:hintEnabled="true"
+        android:hint="رمز عبور"
+        app:hintAnimationEnabled="true"
+        android:textColorHint="@color/green"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintTop_toBottomOf="@+id/username_field"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:backgroundTint="@color/black"
+        android:background="@color/green">
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editpassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="@dimen/small_margin"
+            android:layout_marginEnd="24dp"
+            android:textColor="@color/green"
+            android:background="@color/green"
+            android:backgroundTint="@color/black"
+            android:ems="15"
+            android:inputType="textPassword" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/sign_in"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/small_margin"
+        android:backgroundTint="#71DB77"
+        android:text="ورود"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/password_field"
+        tools:ignore="MissingConstraints" />
+
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/forgot_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/large_margin"
+        android:layout_marginRight="@dimen/large_margin"
+        android:clickable="true"
+        android:text="فراموشی رمز عبور؟"
+        android:textColor="#71DB77"
+        android:textSize="@dimen/text_small_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sign_in"
+        tools:ignore="MissingConstraints" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>

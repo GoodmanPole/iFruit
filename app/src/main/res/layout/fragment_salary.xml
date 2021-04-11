@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/orange"
+    tools:context=".controller.fragment.SalaryFragment">
+
+    <TextView
+        android:id="@+id/salaryinfo_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/large_margin"
+        android:text="جستجو و افزودن حقوق و دستمزد"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_larger_size"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"/>
+
+    <ListView
+        android:id="@+id/lv_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/salaryinfo_text"/>
+
+
+    <TextView
+        android:id="@+id/tv_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textSize="@dimen/text_large_size"
+        android:text="موردی یافت نشد"
+        android:visibility="gone"/>
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/add_employee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/lv_listview"
+        android:layout_alignEnd="@+id/lv_listview"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="16dp"
+        android:contentDescription="Add New Fruit"
+        android:background="@color/green"
+        android:backgroundTint="@color/green"
+        android:src="@drawable/ic_baseline_add_24" />
+
+</RelativeLayout>

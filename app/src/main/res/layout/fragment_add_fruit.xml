@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/winter_2"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".controller.fragment.AddFruitFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/large_margin"
+                android:layout_marginBottom="@dimen/small_margin"
+                android:text="اضافه کردن محصول"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                android:textStyle="bold" android:layout_gravity="center"/>
+
+
+            <ImageView
+                android:id="@+id/app_logo"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+
+                android:foregroundGravity="left"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_launcher_round"
+                android:layout_gravity="center" />
+
+
+            <EditText
+                android:id="@+id/fruit_id"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:hint="کد محصول"
+                android:textColorHint="@color/white"
+                android:background="@color/orange"
+                android:paddingEnd="@dimen/small_margin"
+                android:layout_marginTop="@dimen/large_margin"
+                android:layout_marginBottom="@dimen/large_margin"
+                android:layout_marginStart="@dimen/large_margin"
+                android:layout_marginEnd="@dimen/large_margin"
+                android:maxLines="1"
+                android:maxLength="15"
+                android:textSize="@dimen/text_larger_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/fruit_name"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/app_logo"
+                tools:ignore="MissingConstraints" />
+
+            <EditText
+                android:id="@+id/fruit_name"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:hint="نام محصول"
+                android:textColorHint="@color/white"
+                android:background="@color/orange"
+                android:layout_marginBottom="@dimen/large_margin"
+                android:layout_marginStart="@dimen/large_margin"
+                android:layout_marginEnd="@dimen/large_margin"
+                android:paddingEnd="@dimen/small_margin"
+                android:maxLines="1"
+                android:maxLength="15"
+                android:textSize="@dimen/text_larger_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/fruit_price"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fruit_id"
+                tools:ignore="MissingConstraints" />
+
+            <EditText
+                android:id="@+id/fruit_price"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:hint="قیمت پایه محصول"
+                android:textColorHint="@color/white"
+                android:background="@color/orange"
+                android:layout_marginBottom="@dimen/large_margin"
+                android:layout_marginStart="@dimen/large_margin"
+                android:layout_marginEnd="@dimen/large_margin"
+                android:paddingEnd="@dimen/small_margin"
+                android:maxLines="1"
+                android:maxLength="15"
+                android:textSize="@dimen/text_larger_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fruit_name"
+                app:layout_constraintBottom_toTopOf="@id/fruit_quality"
+                tools:ignore="MissingConstraints" />
+
+            <EditText
+                android:id="@+id/fruit_quality"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:hint="درجه محصول"
+                android:textColorHint="@color/white"
+                android:background="@color/orange"
+                android:layout_marginTop="@dimen/large_margin"
+                android:layout_marginBottom="@dimen/large_margin"
+                android:layout_marginStart="@dimen/large_margin"
+                android:layout_marginEnd="@dimen/large_margin"
+                android:paddingEnd="@dimen/small_margin"
+                android:maxLines="1"
+                android:maxLength="15"
+                android:textSize="@dimen/text_larger_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fruit_price"
+                tools:ignore="MissingConstraints" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/fruitinfo_btn"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/btn_margin"
+                android:layout_marginBottom="@dimen/large_margin"
+                android:background="@drawable/rounded_btn"
+                android:backgroundTint="@color/black"
+                android:text="ثبت اطلاعات"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_large_size"
+                android:textStyle="bold"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

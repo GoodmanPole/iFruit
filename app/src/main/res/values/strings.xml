@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">iFruit</string>
+    <string name="valid_character_username">123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_.</string>
+    <string name="valid_character_password">123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ@#$*</string>
+    <string name="error_message_email">Invalid Username</string>
+    <string name="error_valid_email_password">Invalid Password</string>
+    <string name="error_message_password">Invalid Password</string>
+    <string name="success_message">User Registerd</string>
+    <string name="error_email_exists">Invalid Username</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

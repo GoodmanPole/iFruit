@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/mainMenuFragment">
+
+    <fragment
+        android:id="@+id/mainMenuFragment"
+        android:name="com.example.ifruit.controller.fragment.MainMenuFragment"
+        android:label="fragment_main_menu"
+        tools:layout="@layout/fragment_main_menu">
+        <action
+            android:id="@+id/action_mainMenuFragment_to_accountingFragment"
+            app:destination="@id/accountingFragment" />
+        <action
+            android:id="@+id/action_mainMenuFragment_to_managementFragment"
+            app:destination="@id/managementFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/accountingFragment"
+        android:name="com.example.ifruit.controller.fragment.AccountingFragment"
+        android:label="fragment_accounting"
+        tools:layout="@layout/fragment_accounting">
+        <action
+            android:id="@+id/action_accountingFragment_to_fruitInfoFragment"
+            app:destination="@id/fruitInfoFragment" />
+        <action
+            android:id="@+id/action_accountingFragment_to_acountingInfoFragment"
+            app:destination="@id/acountingInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/managementFragment"
+        android:name="com.example.ifruit.controller.fragment.ManagementFragment"
+        android:label="fragment_management"
+        tools:layout="@layout/fragment_management" />
+    <fragment
+        android:id="@+id/acountingInfoFragment"
+        android:name="com.example.ifruit.controller.fragment.AcountingInfoFragment"
+        android:label="fragment_acounting_info"
+        tools:layout="@layout/fragment_acounting_info" >
+        <action
+            android:id="@+id/action_acountingInfoFragment_to_salaryFragment"
+            app:destination="@id/salaryFragment" />
+        <action
+            android:id="@+id/action_acountingInfoFragment_to_incomeFragment"
+            app:destination="@id/incomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addFruitFragment"
+        android:name="com.example.ifruit.controller.fragment.AddFruitFragment"
+        android:label="fragment_add_fruit"
+        tools:layout="@layout/fragment_add_fruit" />
+    <fragment
+        android:id="@+id/salaryFragment"
+        android:name="com.example.ifruit.controller.fragment.SalaryFragment"
+        android:label="fragment_salary"
+        tools:layout="@layout/fragment_salary" >
+        <action
+            android:id="@+id/action_salaryFragment_to_addSalaryInfoFragment"
+            app:destination="@id/addSalaryInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/incomeFragment"
+        android:name="com.example.ifruit.controller.fragment.IncomeFragment"
+        android:label="fragment_income"
+        tools:layout="@layout/fragment_income" />
+    <fragment
+        android:id="@+id/addSalaryInfoFragment"
+        android:name="com.example.ifruit.controller.fragment.AddSalaryInfoFragment"
+        android:label="fragment_add_salary_info"
+        tools:layout="@layout/fragment_add_salary_info" />
+    <fragment
+        android:id="@+id/fruitInfoFragment"
+        android:name="com.example.ifruit.controller.fragment.FruitInfoFragment"
+        android:label="fragment_fruit_info"
+        tools:layout="@layout/fragment_fruit_info" >
+        <action
+            android:id="@+id/action_fruitInfoFragment_to_addFruitFragment"
+            app:destination="@id/addFruitFragment" />
+    </fragment>
+</navigation>
